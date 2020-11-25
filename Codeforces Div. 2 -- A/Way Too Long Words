@@ -1,0 +1,39 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <ostream>
+#include <cstdio>
+#include <vector>
+#include <cassert>
+
+using namespace std;
+
+int main()
+{
+    int testcases;
+    cin >> testcases;
+    while (testcases--) {
+        
+		
+		string str;
+		cin >> str;
+		
+		int wordcount;
+		wordcount = str.length();
+		
+		if(wordcount >10){
+			cout << str[0] << wordcount -2 << str[wordcount -1] << endl; 
+		}
+		else 
+			cout << str << endl;
+    
+	}
+}
+		
