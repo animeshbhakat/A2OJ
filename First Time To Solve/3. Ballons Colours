@@ -1,0 +1,50 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+/*#include <string>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <ostream>
+#include <cstdio>
+#include <vector>
+#include <cassert>*/
+
+
+using namespace std;
+
+
+#define endl '\n'
+
+int main(){
+	
+	int testcases;
+	
+	cin >> testcases;
+	
+	while (testcases--){
+		
+		long long int totprob, a, b;
+		
+		cin >> totprob >> a >> b;
+		
+		int arr[totprob];
+		
+		for(int i=0; i<totprob; i++){
+			
+			cin >> arr[i];
+		}
+		
+		if(arr[0] ==a && arr[totprob -1] == b)
+			cout << "BOTH" << endl;
+		else if(arr[0] == a && arr[totprob -1] != b)
+			cout << "EASY" << endl;
+		else if(arr[0] != a && arr[totprob -1] == b)
+			cout << "HARD" << endl;
+		else
+			cout << "OKAY" << endl;
+	}
+}

@@ -1,0 +1,84 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <ostream>
+#include <cstdio>
+#include <vector>
+#include <cassert>
+
+
+using namespace std;
+
+
+#define endl '\n'
+
+int main(){
+	
+	int testcases;
+	
+	int n;
+	string s, tmp;
+	bool bf_af;
+	
+	vector<string> v1, v2;
+	
+	cin >> testcases;
+	
+	while (testcases--){
+		
+		s = "";
+		v1.clear();
+		v2.clear();
+		
+		bf_af = false;
+		
+		cin >> n;
+		while(n--){
+			
+			cin >> tmp;
+			
+			if(!bf_af && tmp[0] == '#')
+				v1.push_back(tmp);
+			if(bf_af && tmp[0] == '#')
+				v2.push_back(tmp);
+			if(tmp[0] != '#'){
+				
+				s = tmp;
+				bf_af =true;
+			}
+		}
+		
+		for(int i =0; i < v2.size(); i++){
+			if(i)
+				cout << ' ';
+			cout << v2[i];
+		}
+		
+		if(s != "" && v2.size()) cout << ' ' << s;
+		else cout << s;
+			
+			
+			if (s != "" || v2.size()){
+				for(int i=0; i<v1.size(); i++)
+					cout << ' ' << v1[i];
+			}
+			else if(s == "")
+				
+				for(int i =0; i < v1.size(); i++){
+					if(i)
+						cout << ' ';
+					cout << v1[i];
+				}
+				
+		cout << endl;
+		
+		
+}
+}
