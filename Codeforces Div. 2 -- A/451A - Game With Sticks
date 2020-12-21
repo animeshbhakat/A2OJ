@@ -1,0 +1,32 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cstdio>
+#include <vector>
+#include <cassert>
+#include <cstdlib>
+
+using namespace std;
+
+
+	int main(){
+
+			int n,m; 
+			cin >> n >> m;
+			
+			string arr[2] = {"Akshat", "Malvika"};
+			
+			int x = min(n,m);
+			
+			int y = x%2;
+			
+			cout << arr[(y+1)%2] << endl;
+}
+	
