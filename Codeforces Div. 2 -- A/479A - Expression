@@ -1,0 +1,32 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cstdio>
+#include <vector>
+#include <cassert>
+#include <cstdlib>
+
+using namespace std;
+
+
+int main() {
+	
+		int x, y, z;
+		
+		cin >> x >>y >>z;
+		int maximum = x+y+z;
+		maximum= max(maximum, (x+y)*z);
+		maximum = max(maximum, x*(y+z));
+		maximum = max (maximum, x*y*z);
+		
+		cout << maximum << endl;
+ 
+}
+		

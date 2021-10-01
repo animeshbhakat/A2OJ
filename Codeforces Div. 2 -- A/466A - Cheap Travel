@@ -1,0 +1,37 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <cstdio>
+#include <vector>
+#include <cassert>
+#include <cstdlib>
+
+using namespace std;
+
+
+int main() {
+		int n, m, a, b;
+		cin >> n >> m >> a >> b;
+		int total1, total2, total3 =INT_MAX;
+		
+		total1 = n * a;
+		total2 = (n/m)*b + (n%m)*a;
+		if( n % m !=0)
+			total3 = ((n/m) +1) *b;
+		
+		if(total1 <= total2 && total1 <=total3)
+			cout << total1 << endl;
+		else if(total2 <= total3 && total2 <=total1)
+			cout << total2 << endl;
+		else
+			cout << total3 << endl;
+	
+}
+		
